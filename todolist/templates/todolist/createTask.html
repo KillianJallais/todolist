@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'todolist/createTaskStyle.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">ToDoList</div>
+
+    <nav class="menuBarre">
+        <ul>
+            <li>
+                <a class="otherTasks" href="/todolist/">Home</a>
+            </li>
+            <li>
+                <a class="otherTasks" href="/todolist/completedTask/">Tâche complétées</a>
+            </li>
+            <li >
+                <a class="otherTasks" href="/todolist/obsoleteTask/">Tâche obsolète</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <form class="form" action="/todolist/addTask/" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h2>Créer une nouvelle tâche</h2></legend>
+            <div>
+                <label for="name">Nom de la tâche :</label>
+                <input type="text" name="name" required="true" value="{{name}}">
+            </div>
+
+            <div class="description">
+                <label for="description">Description de la tâche : </label>
+                <textarea name="description">{{description}}</textarea>
+            </div>
+            <div>
+                {% if error != "" %}
+                <div class="error">{{error}}</div>
+                {% endif %}
+                <label for="limiteDate">A finir avant le : </label>
+                <input type="date" name="limiteDate" required="true" value="{{limiteDate}}">
+            </div>
+            <input type="submit" value="Ajouter la tâche">
+        </fieldset>
+    </form>
+</body>
+</html>

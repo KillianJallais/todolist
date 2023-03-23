@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'todolist/indexStyle.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">ToDoList</div>
+
+    <nav class="menuBarre">
+        <ul>
+            <li>
+                <a class="otherTasks" href="/todolist/">Home</a>
+            </li>
+            <li>
+                <a class="otherTasks" href="/todolist/completedTask/">Tâche complétées</a>
+            </li>
+            <li >
+                <a class="otherTasks" href="/todolist/obsoleteTask/">Tâche obsolète</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="tasks">
+        <div>Choses à faire :</div>
+        <ul>
+            {% for task in tasks %}
+            <a href="/todolist/{{task.id}}/"><li>-{{task.name}}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <a href="/todolist/createTask/"><input id="newTask" type="button" value="Créer une nouvelle tâche"></a>
+</body>
+</html>

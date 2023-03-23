@@ -1,0 +1,108 @@
+body {
+    background-color: #ede1d5;
+    width: 60%;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    margin-top: 3%;
+    font-size: 25pt;
+    font-weight: bold;
+    color: #7b503a;
+    text-align: center;
+}
+
+.menuBarre {
+    background-color: #D4A190;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.menuBarre ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menuBarre li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menuBarre a {
+    display: block;
+    color: #333333;
+    text-decoration: none;
+    height: 40%;
+    padding: 15px;
+    font-size: 13pt;
+}
+
+.menuBarre a:hover {
+    background-color: #a77e71;
+}
+
+.taskName {
+    float: left;
+    font-size: 20pt;
+    margin: 3% 0;
+    color: #7e574e;
+    font-weight: 800;
+}
+
+.completedCheck {
+    float: right;
+    font-size: 20pt;
+    margin: 3% 0;
+    color: #000000;
+}
+
+.description {
+    clear: both;
+    font-size: 13pt;
+}
+
+.date {
+    margin: 3% 0;
+    text-align: right;
+    font-size: 13pt;
+}
+
+.actions {
+    margin-top: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    height: 50px;
+}
+
+.actions input{
+    background-color: #D4A190;
+    border: none;
+    border-radius: 5px;
+    height: 100%;
+    color: #7b503a;
+    padding: 15px 10px;
+    font-size: 13pt;
+}
+
+.actions input:hover {
+    background-color: #a77e71;
+    cursor: pointer;
+}
+
+.save input {
+    color: #FFFFFF;
+}

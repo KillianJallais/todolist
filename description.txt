@@ -1,0 +1,12 @@
+Une simple todolist dans un premier temps.
+La possibilité de créer une tâche, de la modifier, de la marquer comme faite ou de la supprimer.
+
+
+Strucure de donnée : Task:
+	Un nom pour la tâche (modifiable).
+	Une description non obligatoire(modifiable).
+	Un attribut pour savoir si elle est complétée ou non (modifiable).
+	Une date limite, non obligatoire (modifiable).
+	Un attribut pour savoir si elle est expiré ou non.
+	############################# Pour plus tard #############################
+	Un type/catégorie de tâche (pour plus tard).

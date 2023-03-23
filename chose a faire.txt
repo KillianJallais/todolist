@@ -1,0 +1,3 @@
+-Faire en sorte de dire que une tâche est faite.
+-Creer une page pour voir les taches qui sont faites et avoir la possibilité de dire
+que une tâche n'est plus faite.

@@ -1,0 +1,90 @@
+body {
+    background-color: #ede1d5;
+    width: 60%;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    margin-top: 3%;
+    font-size: 25pt;
+    font-weight: bold;
+    color: #7b503a;
+    text-align: center;
+}
+
+.menuBarre {
+    background-color: #D4A190;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.menuBarre ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menuBarre li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menuBarre a {
+    display: block;
+    color: #333333;
+    text-decoration: none;
+    height: 40%;
+    padding: 15px;
+    font-size: 13pt;
+}
+
+.menuBarre a:hover {
+    background-color: #a77e71;
+}
+
+.form label {
+    color: #7b503a;
+    font-size: 15pt;
+    font-weight: 600;
+}
+
+.description {
+    margin: 3% 0;
+}
+
+.description label {
+    vertical-align: top;
+}
+
+.form input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3%;
+    padding: 15px 10px;
+    background-color: #D4A190;
+    border: none;
+    border-radius: 5px;
+    font-size: 13pt;
+    color: #FFFFFF;
+}
+
+.form input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #a77e71;
+}
+
+.error {
+    color: red;
+}
