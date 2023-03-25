@@ -1,12 +1,9 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, JsonResponse
 from todolist.models import Task
 from django.utils import timezone
 
 import pytz
-
-import datetime
-
 
 ##################### Views that shows the different types of task #####################
 def index(request):
@@ -212,3 +209,13 @@ def completeTask(request, taskId):
     task.save()
     
     return redirect("/todolist/")
+
+def getTasksIds(request):
+    """
+    Return the ids of all the task in json format
+    """
+    tasks = Task.objects.all()
+
+    content = {(task.name):(task.id) for task in tasks}
+
+    return JsonResponse(content)

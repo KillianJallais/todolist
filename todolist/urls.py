@@ -12,4 +12,5 @@ urlpatterns = [
     path("<int:taskId>/completeTask/", views.completeTask, name="completeTask"),
     path("completedTask/", views.completedTask, name="completedTask"),
     path("obsoleteTask/", views.obsoleteTask, name="obsoleteTask"),
+    path("getTasksIds/", views.getTasksIds, name="getTasksIds"),
 ]
